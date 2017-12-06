@@ -20,7 +20,6 @@ class UserTasksController < ApplicationController
 
   # GET /user_tasks/1/edit
   def edit
-    @user_task.due = fix_date(params[:user_task][:due])
   end
 
   # POST /user_tasks
