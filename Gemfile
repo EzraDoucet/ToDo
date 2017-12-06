@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
+gem 'stamp'
 
 # * Forms *
 gem 'simple_form'
