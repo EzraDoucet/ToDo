@@ -1,5 +1,8 @@
 $('#task-form').html("<%= j (render 'form') %>").slideDown(350);
 
+$('#minimize').click(function() {
+ $('#task-form').slideUp(350);
+});
+
 <%= render 'datepicker' %>
 
-$('.minimize').click.html("<%= j (render 'form') %>").slideUp(350);

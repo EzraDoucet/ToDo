@@ -20,12 +20,14 @@ class UserTasksController < ApplicationController
 
   # GET /user_tasks/1/edit
   def edit
+    @user_task.due = fix_date(params[:user_task][:due])
   end
 
   # POST /user_tasks
   # POST /user_tasks.json
   def create
     @user_task = UserTask.new(user_task_params)
+    @user_task.due = fix_date(params[:user_task][:due])
 
     respond_to do |format|
       if @user_task.save
@@ -80,5 +82,11 @@ class UserTasksController < ApplicationController
 
     def all_tasks
       @user_tasks = UserTask.all.order(:due)
+    end
+
+    def fix_date(due_date)
+      date_array = due_date.split('-')
+      due_date = date_array.insert(0, date_array.pop).join('-')
+      Date.parse(due_date)
     end
 end
