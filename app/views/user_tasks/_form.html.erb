@@ -3,12 +3,12 @@
    <%= f.error_notification %>
 
    <div class="form-inputs">
-     <%= f.input :description %>
-     <%= f.input :due %>
+     <%= f.input :description, placeholder: 'Type what you gotta do here!' %>
+     <%= f.input :due, as: :string, placeholder: 'Today, Junior' %>
    </div>
 
    <div class="form-actions">
-     <%= f.submit %>
+     <%= f.button :submit, class: 'btn btn-info btn-sm' %>
    </div>
  <% end %>
  <br>
