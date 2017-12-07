@@ -85,7 +85,7 @@ class UserTasksController < ApplicationController
 
     def fix_date(due_date)
       date_array = due_date.split('-')
-      due_date = date_array.insert(0, date_array.shift).join('-')
+      due_date = date_array.insert(0, date_array.pop).join('-')
       Date.parse(due_date)
     end
 end
