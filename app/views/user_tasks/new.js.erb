@@ -2,7 +2,10 @@ $('#task-form').html("<%= j (render 'form') %>").slideDown(350);
 
 $('#minimize').click(function() {
  $('#task-form').slideUp(350);
+ $('.add-task').show(0);
 });
+
+$('.add-task').hide(0);
 
 <%= render 'datepicker' %>
 
